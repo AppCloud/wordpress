@@ -70,6 +70,9 @@
         "wordpress-install-dir": "public/wp"
     },
     "scripts": {
+        "post-install-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
         "lint": "pint --test",
         "lint:fix": "pint"
     }
